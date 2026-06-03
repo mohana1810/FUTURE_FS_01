@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import { Trophy, Shield, Award, Atom, Eye, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Section } from "./Section";
-import certDevfest from "@/assets/cert-devfest.jpeg";
-import certWiser from "@/assets/cert-wiser.jpeg";
-import certQuantum from "@/assets/cert-quantum.jpeg";
-import certQuantumMerit from "@/assets/cert-quantum-merit.jpeg";
-
+import certDevfest from "../../assets/cert-devfest.jpeg";
+import certWiser from "../../assets/cert-wiser.jpeg";
+import certQuantum from "../../assets/cert-quantum.jpeg";
+import certQuantumMerit from "../../assets/cert-quantum-merit.jpeg";
 type Item = {
   icon: typeof Trophy;
   title: string;

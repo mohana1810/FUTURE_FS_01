@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin, GraduationCap, Sparkles, Code2, Brain } from "lucide-react";
 import { Section } from "./Section";
-import avatar from "@/assets/mohana-avatar.jpg";
-
+import avatar from "../../assets/mohana-avatar.jpg";
 export function About() {
   return (
     <Section
