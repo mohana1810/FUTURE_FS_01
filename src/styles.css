@@ -1,0 +1,186 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-teal-1: var(--teal-1);
+  --color-teal-2: var(--teal-2);
+  --color-teal-3: var(--teal-3);
+  --color-teal-4: var(--teal-4);
+  --color-purple-1: var(--purple-1);
+  --color-purple-2: var(--purple-2);
+  --color-purple-3: var(--purple-3);
+  --color-purple-4: var(--purple-4);
+  --color-lavender-1: var(--lavender-1);
+  --color-lavender-2: var(--lavender-2);
+  --color-lavender-3: var(--lavender-3);
+  --color-glass: var(--glass);
+
+  --animate-blob: blob 18s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 8s linear infinite;
+  --animate-fade-up: fade-up 0.7s ease-out;
+
+  @keyframes blob {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(40px,-30px) scale(1.1); }
+    66% { transform: translate(-30px,20px) scale(0.95); }
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Brand palette */
+  --teal-1: oklch(0.45 0.07 215);   /* #1E6173 */
+  --teal-2: oklch(0.52 0.08 230);   /* #2E7294 */
+  --teal-3: oklch(0.6 0.09 230);    /* #3484AD */
+  --teal-4: oklch(0.63 0.09 230);   /* #348FB6 */
+
+  --purple-1: oklch(0.21 0.16 295);
+  --purple-2: oklch(0.24 0.18 295);
+  --purple-3: oklch(0.28 0.2 295);
+  --purple-4: oklch(0.32 0.22 295);
+
+  --lavender-1: oklch(0.55 0.1 305);
+  --lavender-2: oklch(0.68 0.08 305);
+  --lavender-3: oklch(0.82 0.05 305);
+
+  --glass: oklch(1 0 0 / 6%);
+
+  --background: oklch(0.13 0.06 285);
+  --foreground: oklch(0.97 0.01 300);
+  --card: oklch(0.18 0.08 290 / 70%);
+  --card-foreground: oklch(0.97 0.01 300);
+  --popover: oklch(0.18 0.08 290);
+  --popover-foreground: oklch(0.97 0.01 300);
+  --primary: oklch(0.63 0.09 230);
+  --primary-foreground: oklch(0.13 0.06 285);
+  --secondary: oklch(0.32 0.22 295);
+  --secondary-foreground: oklch(0.97 0.01 300);
+  --muted: oklch(0.22 0.05 290);
+  --muted-foreground: oklch(0.75 0.04 300);
+  --accent: oklch(0.55 0.1 305);
+  --accent-foreground: oklch(0.97 0.01 300);
+  --destructive: oklch(0.6 0.22 20);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.63 0.09 230);
+}
+
+.light {
+  --background: oklch(0.98 0.01 300);
+  --foreground: oklch(0.18 0.06 290);
+  --card: oklch(1 0 0 / 70%);
+  --card-foreground: oklch(0.18 0.06 290);
+  --muted: oklch(0.94 0.02 300);
+  --muted-foreground: oklch(0.4 0.04 290);
+  --border: oklch(0.18 0.06 290 / 12%);
+  --input: oklch(0.18 0.06 290 / 14%);
+  --glass: oklch(1 0 0 / 50%);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  ::selection { background: var(--color-purple-3); color: var(--color-foreground); }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(120deg, var(--color-teal-4), var(--color-lavender-2), var(--color-purple-4));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 8s linear infinite;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--color-teal-1), var(--color-purple-3) 60%, var(--color-purple-1));
+  }
+  .glass {
+    background: var(--color-glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid color-mix(in oklab, var(--color-foreground) 10%, transparent);
+  }
+  .glass-card {
+    background: linear-gradient(145deg, color-mix(in oklab, var(--color-foreground) 6%, transparent), color-mix(in oklab, var(--color-foreground) 2%, transparent));
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in oklab, var(--color-foreground) 12%, transparent);
+    box-shadow: 0 10px 40px -20px color-mix(in oklab, var(--color-purple-1) 80%, transparent);
+  }
+  .glow-ring:hover {
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-teal-4) 60%, transparent),
+                0 20px 60px -10px color-mix(in oklab, var(--color-purple-3) 60%, transparent);
+  }
+  .btn-primary {
+    background: linear-gradient(120deg, var(--color-teal-3), var(--color-purple-4));
+    color: white;
+    transition: all .3s ease;
+  }
+  .btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: 0 14px 40px -10px color-mix(in oklab, var(--color-teal-3) 70%, transparent); }
+  .btn-ghost {
+    border: 1px solid color-mix(in oklab, var(--color-foreground) 18%, transparent);
+    transition: all .3s ease;
+  }
+  .btn-ghost:hover { background: var(--color-glass); border-color: var(--color-teal-4); }
+
+  .grid-bg {
+    background-image:
+      radial-gradient(color-mix(in oklab, var(--color-foreground) 8%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
