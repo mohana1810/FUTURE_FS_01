@@ -39,7 +39,7 @@ export const Route = createFileRoute('/api/public/contact')({
         const { name, email, message } = parsed.data
 
         try {
-          const client = await clientPromise
+          const client = await getMongoClient()
           const dbName = process.env.MONGODB_DB_NAME || 'portfolioDB'
           const db = client.db(dbName)
 
