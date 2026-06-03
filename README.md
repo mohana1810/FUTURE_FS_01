@@ -1,78 +1,91 @@
-# Personal Portfolio Website
+# 🚀 Mohana Jarajapu - Portfolio
 
-A modern developer portfolio built with React, TypeScript, Vite, and TanStack Start. The portfolio showcases projects, skills, achievements, and contact information through a responsive and interactive user interface.
+A modern, responsive, full-stack portfolio website showcasing my projects, achievements, skills, certifications, and contact information.
 
-## Features
+## 🌐 Live Demo
 
-* Responsive design for desktop, tablet, and mobile devices
-* Interactive project showcase section
-* Skills and technology stack display
-* Professional About Me section
-* Contact form with MongoDB integration
-* Email notifications using Gmail SMTP
-* Smooth animations and modern UI components
-* GitHub and LinkedIn profile integration
-* Fast performance with Vite and React
+🔗 Live Portfolio: https://future-fs-01-portfolio-one.vercel.app/
 
-## Tech Stack
+## About
+
+A modern portfolio website showcasing my projects, skills, achievements, and contact information. Built to highlight my work in AI/ML and Full Stack Development.
+
+## ✨ Features
+
+### 🎨 Modern UI/UX
+- Responsive design
+- Dark theme interface
+- Smooth animations
+- Mobile-friendly layout
+
+### 👤 Professional Portfolio
+- About Me section
+- Skills showcase
+- Project gallery
+- Achievement timeline
+- Resume download
+
+### 📬 Contact System
+- Functional contact form
+- Email notifications using SMTP
+- MongoDB Atlas integration
+- Server-side validation
+
+### ☁️ Deployment
+- Hosted on Vercel
+- Automatic CI/CD from GitHub
+- Production-ready configuration
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
-
-* React
-* TypeScript
-* Vite
-* TanStack Start
-* Tailwind CSS
-* Framer Motion
+- React
+- TypeScript
+- Vite
+- TanStack Router
+- Tailwind CSS
 
 ### Backend
-
-* TanStack Server Routes
-* Node.js
+- Node.js
+- Server Functions
+- Nodemailer
 
 ### Database
+- MongoDB Atlas
 
-* MongoDB Atlas
+### Deployment
+- Vercel
 
-### Email Service
+---
 
-* Nodemailer
-* Gmail SMTP
+## 📂 Project Structure
 
-## Project Structure
-
-```text
+```bash
 src/
 ├── components/
 ├── routes/
+├── assets/
+├── hooks/
 ├── lib/
-├── integrations/
-└── styles
-
-public/
-supabase/
+└── integrations/
 ```
 
-## Local Setup
+---
 
-### Prerequisites
-
-* Node.js (v18 or later)
-* npm
-* MongoDB Atlas account
-
-### Installation
+## ⚙️ Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/mohana1810/FUTURE_FS_01.git
+git clone <your-repository-url>
 ```
 
-Navigate to the project folder:
+Navigate to the project:
 
 ```bash
-cd FUTURE_FS_01
+cd MYportfolio
 ```
 
 Install dependencies:
@@ -81,30 +94,66 @@ Install dependencies:
 npm install
 ```
 
-Create a `.env` file in the project root and configure the required environment variables.
-
-Start the development server:
+Run locally:
 
 ```bash
 npm run dev
 ```
 
-Open:
+---
 
-```text
-http://localhost:8080
+## 🔐 Environment Variables
+
+Create a `.env` file:
+
+```env
+MONGODB_URI=your_mongodb_uri
+MONGODB_DB_NAME=portfolioDB
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+FROM_EMAIL=your_email@gmail.com
 ```
 
-## Contact Form
+---
 
-The contact form:
+## 📬 Contact Form Features
 
-* Stores messages in MongoDB Atlas
-* Sends email notifications using Gmail SMTP
-* Validates user input before submission
+When a visitor submits the contact form:
 
-## Author
+1. Data is validated on the server.
+2. Contact details are stored in MongoDB Atlas.
+3. An email notification is sent to the portfolio owner.
+4. Success response is returned to the user.
 
-Mohana Jarajapu
+---
 
-GitHub: https://github.com/mohana1810
+## 🏆 Highlights
+
+- Full Stack Portfolio Website
+- MongoDB Atlas Integration
+- SMTP Email Notifications
+- Responsive Design
+- Vercel Deployment
+- TypeScript-Based Architecture
+
+---
+
+
+## 🔗 Connect With Me
+
+### GitHub
+https://github.com/mohana1810
+
+### LinkedIn
+https://www.linkedin.com/in/mohana-jarajapu
+
+### Portfolio
+https://future-fs-01-portfolio-one.vercel.app/
+
+### Email
+anier6180811@gmail.com
+
+---
