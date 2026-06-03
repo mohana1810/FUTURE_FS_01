@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { z } from 'zod'
-import clientPromise from "../../../lib/mongodb";
+import { getMongoClient } from "../../../lib/mongodb";
 
 const ContactSchema = z.object({
   name: z.string().trim().min(1).max(100),
