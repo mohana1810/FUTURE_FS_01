@@ -1,25 +1,23 @@
-import { MongoClient } from 'mongodb'
+import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI
+const uri = process.env.MONGODB_URI;
+
 if (!uri) {
-  throw new Error('Missing MONGODB_URI')
+  throw new Error("Missing MONGODB_URI");
 }
-
-const options = {}
-
-let client: MongoClient
-let clientPromise: Promise<MongoClient>
 
 declare global {
   // eslint-disable-next-line no-var
-  var _mongoClientPromise: Promise<MongoClient> | undefined
+  var __mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
-if (!global._mongoClientPromise) {
-  client = new MongoClient(uri, options)
-  global._mongoClientPromise = client.connect()
+const client = new MongoClient(uri);
+
+const clientPromise =
+  global.__mongoClientPromise ?? client.connect();
+
+if (!global.__mongoClientPromise) {
+  global.__mongoClientPromise = clientPromise;
 }
 
-clientPromise = global._mongoClientPromise
-
-export default clientPromise
+export default clientPromise;
