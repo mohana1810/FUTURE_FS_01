@@ -38,7 +38,7 @@ export const Route = createFileRoute('/api/public/contact')({
 
         const { name, email, message } = parsed.data
 
-        try {
+        /*try {
           const client = await getMongoClient()
           const dbName = process.env.MONGODB_DB_NAME || 'portfolioDB'
           const db = client.db(dbName)
@@ -52,7 +52,8 @@ export const Route = createFileRoute('/api/public/contact')({
         } catch (err) {
           console.error('[contact] mongodb insert failed:', err)
           return Response.json({ error: 'Could not save message' }, { status: 500 })
-        }
+        }*/
+        console.log("MongoDB skipped");
 
         const host = process.env.SMTP_HOST
         const port = Number(process.env.SMTP_PORT ?? 587)
