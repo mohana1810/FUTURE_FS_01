@@ -72,14 +72,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Mohana Jarajapu — AIML Student & Full Stack Developer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Mohana Jarajapu — Computer Science (AI-ML) student from Visakhapatnam building intelligent full-stack products.",
+      },
+      { name: "author", content: "Mohana Jarajapu" },
+      { property: "og:title", content: "Mohana Jarajapu — AIML & Full Stack Developer" },
+      {
+        property: "og:description",
+        content:
+          "Projects, skills, and journey of an AI-ML undergrad shipping real products.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
